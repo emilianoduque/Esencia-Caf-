@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA689noNrTg3uhX_kVhQgdWFKfxQR1fxFI",
-  authDomain: "esenciacafe-8494f.firebaseapp.com",
-  projectId: "esenciacafe-8494f",
-  storageBucket: "esenciacafe-8494f.firebasestorage.app",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.AUTH_DOMAIN,
+  projectId: import.meta.env.PROJECT_ID,
+  storageBucket: import.meta.env.STORAGE_BUCKET,
   messagingSenderId: "37574138431",
-  appId: "1:37574138431:web:a05ee0c36616a15d2a768a"
+  appId: import.meta.env.APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
