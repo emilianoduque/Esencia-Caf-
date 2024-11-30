@@ -1,0 +1,40 @@
+@import "../../variables/breakpoints\ &\ mixins.scss";
+
+#carouselExample {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 1200px;
+    height: 820px;
+    margin: 3.5rem auto;
+    .carousel-item {
+        img {
+            width: 100%;
+            height: 820px;
+            @include lg {
+                height: 600px;
+            }
+            @include md {
+                height: 450px;
+            }
+            @include sm {
+                height: 350px;
+            }
+            @include xs {
+                height: 200px;
+            }
+            }
+        }
+    @include lg {
+        width: 95vw;
+        height: 600px;
+    }
+    @include md {
+        height: 450px;
+    }
+    @include sm {
+        height: 350px;
+    }
+    @include xs {
+        height: 200px;
+    }
+}

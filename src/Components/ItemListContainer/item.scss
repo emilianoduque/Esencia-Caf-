@@ -1,0 +1,45 @@
+@import "../../variables/breakpoints\ &\ mixins.scss";
+
+.card {
+    margin-top: 2rem;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+    text-decoration: none;
+        transform:
+          rotate3d(.5,-.866,0,15deg)
+          rotate(1deg);
+          box-shadow: 14px 13px 16px -6px rgba(0,0,0,0.46);
+        transition:
+          transform .4s ease,
+          box-shadow .4s ease;
+        border-radius: .5em;
+        &:hover {
+          transform: scale(1.04)rotate3d(.5,-.866,0,15deg)
+          rotate(1deg);
+        }
+        @include sm {
+          width: 200px;
+        }
+        @media (max-width: 218px){
+          width: 150px;
+        }
+    h2{
+      
+    }
+    p{
+
+    }
+    img{
+        width: 350px;
+        height: 280px;
+        @include sm {
+          width: 200px;
+          height: 150px;
+        }
+        @media (max-width: 218px){
+          width: 150px;
+        }
+    }
+}

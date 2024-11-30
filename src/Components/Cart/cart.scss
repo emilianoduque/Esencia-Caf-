@@ -1,0 +1,117 @@
+@import "../../variables/variables.scss";
+@import "../../variables/breakpoints\ &\ mixins.scss";
+
+.cart-table {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 0 30vh 0;
+    .cart-card{
+        width: 36vw;
+        background-color: $color3;
+        overflow: hidden;
+        border-radius: 15px;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transform:
+        rotate3d(.5,-.866,0,15deg)
+        rotate(1deg);
+        box-shadow: 14px 13px 16px -6px rgba(0,0,0,0.46);
+        transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+        border-radius: .5em;
+        &:hover {
+        transform: scale(1.04)rotate3d(.5,-.866,0,15deg)
+        rotate(1deg);
+      }
+        img{
+            width: 200px;
+            height: 170px;
+        }
+        .button-rest {
+            display: flex;
+            border-radius: 8px;
+            width: 35px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            align-self: center;
+            background-color: $color2;
+            font-size: 1.5rem;
+            color: $color5;
+            margin-left: auto;
+            margin-right: 1.5rem;
+        }
+
+        @media (max-width:1518px){
+            width: 50vw;
+        }
+        @media (max-width:1076px) {
+            width: 75vw;
+        }
+        @media (max-width:730px) {
+            width: 100vw;
+        }
+    }
+
+    .precio {
+
+    }
+    .checkout-button{
+        border: none;
+        border-radius: 8px;
+        background-color: $color1;
+        color: $color4;
+        padding: 1rem;
+        text-decoration: none;
+    }
+}
+
+.no-products{
+    margin: 15vh auto 60vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color2;
+    border-radius: 15px;
+    width: 530px;
+    height: 370px;
+    padding: 1rem;
+    box-shadow: 6px 7px 29px -1px rgba(0,0,0,0.55);
+    color: $color4;
+    @media (max-width:578px){
+        padding: .5rem;
+    }
+    h2{
+        @media (max-width:578px){
+            font-size: 1.3rem;
+        }
+    }
+    .back-inicio{
+        color: $color4;
+        text-decoration: none;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        background-color: $color1;
+        padding: 1rem;
+        @media (max-width:578px){
+            font-size: 1rem;
+        }
+    }
+    @media (max-width:578px) {
+        width: 400px;
+        height: 340px;
+    }
+    @media (max-width:412px) {
+        width: 80%;
+        height: 30vh;
+        
+    }
+}
