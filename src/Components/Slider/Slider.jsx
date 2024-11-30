@@ -6,13 +6,13 @@ const Slider = () => {
     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.3, ease: "linear" }} id="carouselExample" className="carousel slide">
     <div className="carousel-inner">
     <div className="carousel-item active">
-    <img src="../../../public/img/sliders/slider-1.png" className="d-block" alt="..."/>
+    <img src="/img/sliders/slider-1.png" className="d-block" alt="..."/>
     </div>
     <div className="carousel-item">
-    <img src="../../../public/img/sliders/slider-2.png" className="d-block" alt="..."/>
+    <img src="/img/sliders/slider-2.png" className="d-block" alt="..."/>
     </div>
     <div className="carousel-item">
-    <img src="../../../public/img/sliders/slider-3.png" className="d-block" alt="..."/>
+    <img src="/img/sliders/slider-3.png" className="d-block" alt="..."/>
     </div>
     </div>
     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
