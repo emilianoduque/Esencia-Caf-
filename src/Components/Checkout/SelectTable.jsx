@@ -1,6 +1,8 @@
+import "./selectTable.scss";
+
 const SelectTable = ({handleChangeInput, dataForm}) => {
   return (
-    <div>
+    <div className="select-table">
         <label>Seleccionar una mesa</label>
         <select name="mesa" onChange={handleChangeInput} value={dataForm.mesa}>
             <option value="mesa1">mesa1</option>

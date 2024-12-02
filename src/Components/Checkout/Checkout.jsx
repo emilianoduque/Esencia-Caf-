@@ -6,14 +6,16 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import FormCheckout from "./FormCheckout";
 import validateForm from "../validateForm.js";
+import "./checkout.scss";
 
 const Checkout = () => {
     const [idOrder, setIdOrder] = useState(null);
     const [dataForm, setDataForm] = useState({
         nombre: "",
-        telefono: "",
-        mesa: "",
+        email: "",
+        agenda: "",
         opcion: "",
+        mesa: ""
     })
 
     const { cart, totalPrice, deleteCart} = useContext(CartContext);
@@ -53,6 +55,7 @@ const Checkout = () => {
             .catch((error) => console.error(error))
             .finally(() => {
                 uploadStock();
+                deleteCart();
             })
     }
     const uploadStock = () => {
@@ -65,10 +68,10 @@ const Checkout = () => {
   return (
     <div>
         {
-            idOrder === null ? (<FormCheckout dataForm={dataForm} handleChangeInput={handleChangeInput} handleSubmitForm={handleSubmitForm}></FormCheckout>) : <div>
+            idOrder === null ? (<FormCheckout dataForm={dataForm} handleChangeInput={handleChangeInput} handleSubmitForm={handleSubmitForm}></FormCheckout>) : <div className="end-buy">
             <h2>Gracias por tu compra</h2>
             <p>Numero de orden: {idOrder}</p>
-            <Link to="/">Volver al inicio</Link>
+            <Link to="/" className="go-back">Volver al inicio</Link>
             </div>
         }
     </div>

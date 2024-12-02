@@ -1,12 +1,13 @@
 import { useState } from "react";
 import SelectTable from "./SelectTable";
+import "./formCheckout.scss";
 
 const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
     const [showTableSelector, setShowTableSelector] = useState(false);
     const handleSelectChange = (event) => {
         const {name, value} = event.target;
         handleChangeInput(event);
-        if(name === "agenda" && value === "en-lugar"){
+        if(name === "opcion" && value === "en-lugar"){
             setShowTableSelector(true);
         } else {
             setShowTableSelector(false);
@@ -18,7 +19,7 @@ const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
         <input type="text" name="nombre" value={dataForm.nombre} onChange={handleChangeInput}/>
 
         <label>Email</label>
-        <input type="email" name="email" value={dataForm.telefono} onChange={handleSelectChange}/>
+        <input type="email" name="email" value={dataForm.email} onChange={handleChangeInput}/>
 
         <label>Selecciona Opción</label>
         <select name="opcion" value={dataForm.opcion} onChange={handleSelectChange}>

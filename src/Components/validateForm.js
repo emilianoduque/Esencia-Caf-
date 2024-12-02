@@ -4,6 +4,7 @@ let userSchema = object({
     nombre: string().required("Falta el nombre"),
     email: string().email("Falta el email"),
     agenda: string(),
+    opcion: string(),
     mesa: string()
 })
 

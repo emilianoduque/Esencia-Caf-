@@ -4,9 +4,8 @@
 .navbar {
     .container-fluid{
         margin-top: -.5rem;
-        padding: 0 15rem;
-        
-        //Prueba
+        padding: 0 12rem;
+        box-shadow: 7px 10px 17px -1px rgba(0,0,0,0.68);
         border-radius: 0 0 10px 10px;
         background-color: $color3;
         width: 800px;
@@ -29,11 +28,18 @@
                     justify-content: center;
                     align-items: center;
                 }
+                
                 .nav-item{
                     margin: 1rem;
                     .opcion{
                         text-decoration: none;
                         color: black;
+                        transition: .3s ease;
+                        padding: .5rem;
+                        &:hover{
+                            background-color: $color2;
+                            border-radius: 5px;
+                        }
                     }
                 }
             }
